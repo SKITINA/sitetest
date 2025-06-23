@@ -93,38 +93,38 @@ const FeaturesSection = () => {
   };
 
   return (
-    <section className="py-24 bg-gray-50">
+    <section className="py-12 sm:py-16 md:py-24 bg-gray-50">
       <motion.div 
-        className="max-w-7xl mx-auto px-6 text-center"
+        className="max-w-7xl mx-auto px-4 sm:px-6 text-center"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-100px" }}
         variants={containerVariants}
       >
         <motion.div 
-          className="bg-blue-900 text-white px-5 py-2 rounded-full text-sm font-semibold mb-6 inline-block animate-pulse-slow"
+          className="bg-blue-900 text-white px-4 sm:px-5 py-2 rounded-full text-xs sm:text-sm font-semibold mb-4 sm:mb-6 inline-block animate-pulse-slow"
           variants={itemVariants}
         >
           POUR LES PROFESSIONNELS
         </motion.div>
         
         <motion.h2 
-          className="text-6xl font-bold text-gray-900 mb-6"
+          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 sm:mb-6"
           variants={itemVariants}
         >
           Tout ce dont vous avez besoin pour réussir
         </motion.h2>
         
         <motion.p 
-          className="text-xl text-gray-600 mb-16 max-w-3xl mx-auto"
+          className="text-base sm:text-lg md:text-xl text-gray-600 mb-12 sm:mb-16 max-w-3xl mx-auto px-4"
           variants={itemVariants}
         >
           Notre plateforme est conçue pour simplifier la gestion de votre activité, vous faire gagner du temps et vous aider à vous concentrer sur ce que vous faites de mieux : sublimer vos clients.
         </motion.p>
         
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           <FeatureCard 
-            icon={<TrendingUp size={40} />} 
+            icon={<TrendingUp size={32} className="sm:w-10 sm:h-10" />} 
             title="Boostez votre chiffre d'affaires"
             delay={0.2}
           >
@@ -132,7 +132,7 @@ const FeaturesSection = () => {
           </FeatureCard>
           
           <FeatureCard 
-            icon={<Eye size={40} />} 
+            icon={<Eye size={32} className="sm:w-10 sm:h-10" />} 
             title="Soyez encore plus visible"
             delay={0.4}
           >
@@ -140,7 +140,7 @@ const FeaturesSection = () => {
           </FeatureCard>
           
           <FeatureCard 
-            icon={<CalendarX2 size={40} />} 
+            icon={<CalendarX2 size={32} className="sm:w-10 sm:h-10" />} 
             title="Évitez les no shows"
             delay={0.6}
           >
@@ -149,15 +149,15 @@ const FeaturesSection = () => {
         </div>
         
         <motion.div 
-          className="mt-20"
+          className="mt-12 sm:mt-16 md:mt-20"
           variants={itemVariants}
         >
-          <h3 className="text-3xl font-bold text-gray-900 mb-4">Une expérience privilégiée</h3>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
+          <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3 sm:mb-4">Une expérience privilégiée</h3>
+          <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto mb-6 sm:mb-8 px-4">
             Inscrivez-vous pour un accès prioritaire et des avantages exclusifs dès le lancement.
           </p>
           <motion.button 
-            className="bg-blue-900 hover:bg-blue-800 text-white px-10 py-4 rounded-lg font-semibold text-lg shadow-lg btn-animate hover-lift"
+            className="bg-blue-900 hover:bg-blue-800 text-white px-6 sm:px-10 py-3 sm:py-4 rounded-lg font-semibold text-base sm:text-lg shadow-lg btn-animate hover-lift w-full sm:w-auto"
             variants={buttonVariants}
             whileHover="hover"
             whileTap="tap"

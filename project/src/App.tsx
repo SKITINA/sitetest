@@ -31,12 +31,12 @@ function App() {
 
   return (
     <div className="bg-white">
-      <AnimatePresence>
-        {loading && <Preloader />}
-      </AnimatePresence>
-      
-      {!loading && (
+      <AnimatePresence mode="wait">
+        {loading ? (
+          <Preloader key="preloader" />
+        ) : (
         <motion.div
+            key="content"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
@@ -50,13 +50,14 @@ function App() {
             <ClientsSection />
             <ClientFeaturesSection />
             <WhyJoinSection />
-            <ContactSection/>
+              <ContactSection />
           </main>
           <Footer />
           <ScrollToTop />
           <Chatbot />
         </motion.div>
       )}
+      </AnimatePresence>
     </div>
   );
 }

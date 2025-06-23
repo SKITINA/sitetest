@@ -51,23 +51,23 @@ const Footer = () => {
   return (
     <footer id="contact" className="bg-blue-900 text-white relative">
       <motion.div 
-        className="max-w-7xl mx-auto px-6 lg:px-8"
+        className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-100px" }}
       >
-        <div className="py-20 flex flex-col md:flex-row justify-between items-start gap-12">
+        <div className="py-12 sm:py-16 md:py-20 flex flex-col lg:flex-row justify-between items-start gap-8 sm:gap-12">
           {/* About */}
           <motion.div 
-            className="md:w-1/3"
+            className="w-full lg:w-1/3 text-center lg:text-left"
             variants={itemVariants}
           >
-            <h3 className="text-3xl font-bold mb-4 tracking-wider">WELLBE</h3>
-            <p className="text-blue-200 leading-relaxed">
+            <h3 className="text-2xl sm:text-3xl font-bold mb-3 sm:mb-4 tracking-wider">WELLBE</h3>
+            <p className="text-blue-200 leading-relaxed text-sm sm:text-base">
               La première plateforme beauté au Maroc qui connecte les clients aux meilleurs professionnels de beauté.
             </p>
-            <div className="flex space-x-5 mt-6">
+            <div className="flex justify-center lg:justify-start space-x-5 mt-4 sm:mt-6">
               <motion.a 
                 href="#" 
                 className="text-blue-200 hover:text-white transition-colors"
@@ -75,7 +75,7 @@ const Footer = () => {
                 whileHover="hover"
                 whileTap="tap"
               >
-                <Instagram size={24} />
+                <Instagram size={20} className="sm:w-6 sm:h-6" />
               </motion.a>
               <motion.a 
                 href="#" 
@@ -84,7 +84,7 @@ const Footer = () => {
                 whileHover="hover"
                 whileTap="tap"
               >
-                <Facebook size={24} />
+                <Facebook size={20} className="sm:w-6 sm:h-6" />
               </motion.a>
               <motion.a 
                 href="#" 
@@ -93,18 +93,18 @@ const Footer = () => {
                 whileHover="hover"
                 whileTap="tap"
               >
-                <Linkedin size={24} />
+                <Linkedin size={20} className="sm:w-6 sm:h-6" />
               </motion.a>
             </div>
           </motion.div>
 
           {/* Links */}
-          <motion.div variants={itemVariants}>
-            <h4 className="text-2xl font-semibold mb-6">Prêt à transformer la beauté au Maroc ?</h4>
-            <div className="space-y-4">
+          <motion.div variants={itemVariants} className="w-full lg:w-auto">
+            <h4 className="text-xl sm:text-2xl font-semibold mb-4 sm:mb-6 text-center lg:text-left">Prêt à transformer la beauté au Maroc ?</h4>
+            <div className="space-y-3 sm:space-y-4">
               <motion.a 
                 href="#" 
-                className="block border border-blue-200 text-blue-200 hover:bg-white hover:text-blue-900 px-8 py-3 rounded-lg font-medium transition-colors text-center w-full md:w-80 btn-animate hover-lift"
+                className="block border border-blue-200 text-blue-200 hover:bg-white hover:text-blue-900 px-6 sm:px-8 py-3 rounded-lg font-medium transition-colors text-center w-full lg:w-80 btn-animate hover-lift text-sm sm:text-base"
                 variants={buttonVariants}
                 whileHover="hover"
                 whileTap="tap"
@@ -113,7 +113,7 @@ const Footer = () => {
               </motion.a>
               <motion.a 
                 href="#" 
-                className="block border border-blue-200 text-blue-200 hover:bg-white hover:text-blue-900 px-8 py-3 rounded-lg font-medium transition-colors text-center w-full md:w-80 btn-animate hover-lift"
+                className="block border border-blue-200 text-blue-200 hover:bg-white hover:text-blue-900 px-6 sm:px-8 py-3 rounded-lg font-medium transition-colors text-center w-full lg:w-80 btn-animate hover-lift text-sm sm:text-base"
                 variants={buttonVariants}
                 whileHover="hover"
                 whileTap="tap"
@@ -125,7 +125,7 @@ const Footer = () => {
         </div>
 
         <motion.div 
-          className="border-t border-blue-800 py-6 text-center text-sm text-blue-300"
+          className="border-t border-blue-800 py-4 sm:py-6 text-center text-xs sm:text-sm text-blue-300"
           variants={itemVariants}
         >
           &copy; {new Date().getFullYear()} WELLBE. Tous droits réservés.

@@ -70,24 +70,24 @@ const ContactSection = () => {
   );
 
   return (
-    <section id="contact" className="py-24 bg-gray-50">
+    <section id="contact" className="py-12 sm:py-16 md:py-24 bg-gray-50">
       <motion.div
-        className="max-w-7xl mx-auto px-6"
+        className="max-w-7xl mx-auto px-4 sm:px-6"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-100px" }}
         variants={containerVariants}
       >
-        <div className="text-center max-w-2xl mx-auto mb-16">
+        <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-12 md:mb-16">
           <motion.h2
-            className="text-5xl font-bold text-gray-900 mb-6"
+            className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4 sm:mb-6"
             variants={itemVariants}
           >
             Contactez-nous
           </motion.h2>
           
           <motion.p
-            className="text-xl text-gray-600"
+            className="text-base sm:text-lg md:text-xl text-gray-600 px-4"
             variants={itemVariants}
           >
             Une question ? Une suggestion ? Nous sommes à votre écoute.
@@ -95,16 +95,16 @@ const ContactSection = () => {
         </div>
         
         <motion.div
-          className="bg-white rounded-2xl shadow-2xl overflow-hidden"
+          className="bg-white rounded-xl sm:rounded-2xl shadow-2xl overflow-hidden"
           variants={formVariants}
         >
-          <div className="bg-blue-900 px-8 py-10 text-center">
-            <h2 className="text-4xl font-bold text-white">Envoyez-nous un message</h2>
-            <p className="mt-4 text-lg text-blue-200">Remplissez le formulaire ci-dessous et nous vous répondrons rapidement.</p>
+          <div className="bg-blue-900 px-4 sm:px-6 md:px-8 py-8 sm:py-10 text-center">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white">Envoyez-nous un message</h2>
+            <p className="mt-3 sm:mt-4 text-sm sm:text-base md:text-lg text-blue-200 px-4">Remplissez le formulaire ci-dessous et nous vous répondrons rapidement.</p>
           </div>
 
-          <form className="p-8 space-y-6" onSubmit={handleSubmit}>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <form className="p-4 sm:p-6 md:p-8 space-y-4 sm:space-y-6" onSubmit={handleSubmit}>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
                 <InputField id="name" label="Nom complet" type="text" placeholder="Votre nom complet" icon={<User className="w-4 h-4 mr-2 text-gray-400" />} required />
                 <InputField id="email" label="Email" type="email" placeholder="votre@email.com" icon={<Mail className="w-4 h-4 mr-2 text-gray-400" />} required />
                 <InputField id="phone" label="Téléphone" type="tel" placeholder="+212 6XX XXX XXX" icon={<Phone className="w-4 h-4 mr-2 text-gray-400" />} />
@@ -114,7 +114,7 @@ const ContactSection = () => {
                     <TextAreaField id="message" label="Message" placeholder="Décrivez votre demande en détail..." icon={<MessageSquare className="w-4 h-4 mr-2 text-gray-400" />} required />
                 </div>
             </div>
-            <div className="text-center pt-8">
+            <div className="text-center pt-4 sm:pt-6 md:pt-8">
               <AnimatedButton
                 type="submit"
                 size="lg"
@@ -122,6 +122,7 @@ const ContactSection = () => {
                 disabled={isSubmitting}
                 icon={<Send size={18} />}
                 onClick={() => alert('Message envoyé !')}
+                className="w-full sm:w-auto"
               >
                 {isSubmitting ? "Envoi en cours..." : "Envoyer le message"}
               </AnimatedButton>
